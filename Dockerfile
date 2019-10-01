@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/oryx/python:2.7-20190924.1
+FROM mcr.microsoft.com/oryx/python:2.7-20190828.1
 LABEL maintainer="appsvc-images@microsoft.com"
 
 # Web Site Home
@@ -21,8 +21,7 @@ RUN apt-get update \
     && pip install gunicorn \ 
     && pip install virtualenv \
     && pip install flask \
-    && pip install scandir \
-    && pip install mysqlclient 
+    && pip install scandir 
 
 WORKDIR ${HOME_SITE}
 
